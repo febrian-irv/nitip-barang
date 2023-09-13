@@ -1,5 +1,5 @@
 # Implementasi Model-View-Template (MVT) pada Django
-nama:  Febrian Irvansyah 
+nama:  Febrian Irvansyah  
 kelas:  PBP A
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).

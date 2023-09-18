@@ -26,12 +26,12 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 - Melengkapi kerangka yang terdapat pada base.html untuk kebutuhan aplikasi main berupa atribut form untuk menerima input user dan mendisplay hasil dari input tersebut.
 - Membuat berkas baru bernama `forms.py` sebagai struktur form yang dapat menerima data.
 
-#### ✅ Tambahkan 5 fungsi views untuk melihat objek yang sudah ditambahkan dalam format HTML, XML, JSON, XML by ID, dan JSON by ID.
+##### ✅ Tambahkan 5 fungsi views untuk melihat objek yang sudah ditambahkan dalam format HTML, XML, JSON, XML by ID, dan JSON by ID.
 - Fungsi dalam format HTML dilakukan sekaligus untuk menerima request yang diterima dalam parameter bernama `add_item` dan merender `add_item.html`
 - Fungsi dalam format XML dan JSON menambahkan variable yang menyimpan objects pada item dan mereturn `HttpResponse ` yang isi parameternya adalah objects yang diserialisasi.
 - Fungsi XML by ID dan JSON by ID sama implementasinya dengan XML dan JSON biasa namun untuk variable yang menyimpan objects menggunakan filter (pk=id) sehingga dapat diurutkan berdasarkan input.
 
-#### ✅ Membuat routing URL untuk masing-masing views yang telah ditambahkan pada poin 2.
+##### ✅ Membuat routing URL untuk masing-masing views yang telah ditambahkan pada poin 2.
 - Pada urls.py di folder main lakukan import terhadap setiap fungsi yang terdapat pada views.
 - Untuk fungsi add_item, XML, dan JSON tambahkan path sesuai namanya.
 - Untuk fungsi XML by ID dan JSON by ID path ditambahkan `<int:id>` untuk mendapatkan data sesuai idnya.

@@ -1,6 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>{{ nama_aplikasi }}</h1>
 
 <h5>Nama: </h5>
 <p>{{ nama }}</p>
 <h5>Class: </h5>
 <p>{{ kelas }}</p>
+
+<p>Kamu menitip {{ items.count }} barang di aplikasi ini.</p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Description</th>
+    </tr>
+
+    {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
+
+    {% for item in items %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.description}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<br />
+
+<a href="{% url 'main:add_item' %}">
+    <button>
+        Add Item
+    </button>
+</a>
+{% endblock content %}

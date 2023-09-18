@@ -26,6 +26,17 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 
 #### 5️⃣ Mengakses kelima URL di poin 2 menggunakan Postman, membuat screenshot dari hasil akses URL pada Postman, dan menambahkannya ke dalam README.md.
 
+- HTML
+![](img/HTML_function.png)
+- XML
+![](img/XML_function.png)
+- JSON
+![](img/JSON_function.png)
+- XML by ID
+![](img/XMLbyID_function.png)
+- JSON by ID
+![](img/JSONbyID_function.png)
+
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django
 
 #### 1️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).

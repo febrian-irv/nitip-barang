@@ -5,13 +5,13 @@ kelas:  PBP A
 
 ## Tugas 3: Implementasi Form dan Data Delivery pada Django
 
-### Apa perbedaan antara form POST dan form GET dalam Django?
+#### Apa perbedaan antara form POST dan form GET dalam Django?
 
 
 
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django
 
-### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+#### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 Ide implementasi dari tema aplikasi inventori yang saya pilih adalah aplikasi penitipan barang.
 
 ##### ✅ Membuat sebuah proyek Django baru:
@@ -90,7 +90,7 @@ description sebagai deskripsi item dengan tipe TextField.
 - Field `Start Command` diisi dengan `python manage.py migrate && gunicorn shopping_list.wsgi`
 - Masukkan nama aplikasi sebagai domain, centang HTTP Listener, dan lakukan deploy.
 
-### Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
+#### Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 ![](img/bagan-mvt.png)
 
 - Request client akan diterima melalui urls.py yang berisi suatu path tertentu. Path ini menunjukkan hubungan antara views.py dan urls.py, dimana views akan menerima request apabila path yang didapat sesuai dan bekerja sebagai logic layer.
@@ -98,11 +98,11 @@ description sebagai deskripsi item dengan tipe TextField.
 - Antara views dan template berhubungan dengan apa yang ditampilkan ke user, dimana template akan membentuk struktur dasar dari html dan views akan mengatur logic atau apa yang akan ditampilkan berdasarkan template yang telah ada.
 - Diakhir views sebagai logic layer akan memberikan response berupa html yang bisa dilihat oleh user.
 
-### Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+#### Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Jawab:  
 Fungsi virtual enviroment adalah untuk memisahkan antar proyek satu django satu dengan yang lainnya. Dengan memisahkan proyek, kita dapat secara mudah untuk mengatur segala bentuk kebutuhan atau dependencies yang ada pada proyek tersebut tanpa mempengaruhi proyek lain. Jawaban pertanyaan kedua adalah iya. Namun, hal ini akan mempersulit untuk mengatur proyek secara independen dan dapat memicu timbulnya konflik antar proyek. Dengan pemisahan maka kita juga dapat memilih secara tepat apa yang harus dilakukan pada proyek tersebut tergantung environmentnya. Hal tersebut karena setiap environment pasti kemungkinan akan memiliki pembeda seperti versi python, versi library, dll.
 
-### Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya!
+#### Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya!
 Jawab:  
 Ketiga istilah adalah sebuah bentuk pattern arsitektur yang biasa digunakan dalam membangun perangkat lunak. Penggunaan pattern arsitektur yang baik akan menciptakan modularitas yang baik dalam menyatukan kerangka perangkat lunak.
 - MVC(Model-View-Controller)

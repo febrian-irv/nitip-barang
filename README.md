@@ -49,6 +49,9 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 - JSON by ID
 ![](img/JSONbyID_function.png)
 
+#### 6️⃣ Bonus
+Menambahkan pesan "Kamu menitip X barang di aplikasi ini." yang diimplementasikan pada main.html serta memanfaatkan method `.count` untuk mendapatkan nilai X.
+
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django
 
 #### 1️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).

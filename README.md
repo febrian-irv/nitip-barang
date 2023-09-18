@@ -1,6 +1,11 @@
-# Implementasi Model-View-Template (MVT) pada Django
 nama:  Febrian Irvansyah  
 kelas:  PBP A
+
+# Tugas 3: Implementasi Form dan Data Delivery pada Django
+
+### Apa perbedaan antara form POST dan form GET dalam Django?
+
+# Tugas 2: Implementasi Model-View-Template (MVT) pada Django
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 Ide implementasi dari tema aplikasi inventori yang saya pilih adalah aplikasi penitipan barang.

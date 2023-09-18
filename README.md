@@ -22,7 +22,7 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 #### 4️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
 ##### ✅ Membuat input form untuk menambahkan objek model pada app sebelumnya.
-- 
+- Membuat kerangka html yang memunculkan display
 
 #### 5️⃣ Mengakses kelima URL di poin 2 menggunakan Postman, membuat screenshot dari hasil akses URL pada Postman, dan menambahkannya ke dalam README.md.
 

@@ -6,7 +6,7 @@ kelas:  PBP A
 ## Tugas 3: Implementasi Form dan Data Delivery pada Django
 
 #### Apa perbedaan antara form POST dan form GET dalam Django?
-
+GET dan POST adalah method HTTP yang mengurus input form. KKedua method tersebut dibedakan dari segi bagaimana form ditransimisikan setelah dilakukan submit oleh user. Method POST akan memproses data dengan mengenkripsinya terlebih dahulu, mengirim ke server, dan menerima respon. Selain itu, method POST memiliki kelebihan dari segi besar data karena tidak ada pembatasan yang berhubungan dengan URL. Method GET memproses data menjadi sebuah string yang akan muncul pada string query di URL yang menunjukkan kemana data akan dikirim serta berisi data key-value. Method GET memiliki keterbatasan dalam kapasitas karena berhubungan dengan URL yang dibatasi. Oleh karena itu, penggunaannya akan berbeda karena terdapat perbedaan yang jelas dari segi security dan jenis data yang dikirimkan. POST cenderung digunakan untuk data sensitif yang membutuhkan proteksi atau untuk data yang memiliki ukuran besar seperti gambar, Sedangkan GET digunakan untuk mengirim/menerima data yang tidak sensitif dan berukuran tidak besar.
 
 
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django

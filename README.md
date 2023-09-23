@@ -2,7 +2,9 @@ nama:  Febrian Irvansyah
 kelas:  PBP A
 
 # Pemrograman Berbasis Platform🐼
-
+<details>
+<summary>Tugas 3</summary>
+<br>
 ## Tugas 3: Implementasi Form dan Data Delivery pada Django
 
 #### 1️⃣ Apa perbedaan antara form POST dan form GET dalam Django?
@@ -51,6 +53,7 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 
 #### 6️⃣ Bonus
 Menambahkan pesan "Kamu menitip X barang di aplikasi ini." yang diimplementasikan pada main.html serta memanfaatkan method `.count` untuk mendapatkan nilai X.
+</details>
 
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django
 

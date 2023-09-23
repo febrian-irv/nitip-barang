@@ -1,10 +1,11 @@
-nama:  Febrian Irvansyah  
-kelas:  PBP A
+#### nama:  Febrian Irvansyah  
+#### kelas:  PBP A
 
 # Pemrograman Berbasis Platform🐼
 <details>
-<summary>Tugas 3</summary>
+## <summary>Tugas 3</summary>
 <br>
+  
 ## Tugas 3: Implementasi Form dan Data Delivery pada Django
 
 #### 1️⃣ Apa perbedaan antara form POST dan form GET dalam Django?
@@ -55,6 +56,10 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 Menambahkan pesan "Kamu menitip X barang di aplikasi ini." yang diimplementasikan pada main.html serta memanfaatkan method `.count` untuk mendapatkan nilai X.
 </details>
 
+<details>
+## <summary>Tugas 3</summary>
+<br>
+  
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django
 
 #### 1️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
@@ -163,6 +168,5 @@ Pada MVT, View menjadi layer logic yang akan menjembatani hubungan antara data p
 Pada MVVM, memisahkan View dari bagian layer logic. View akan berguna untuk memberikan suatu informasi apabila terjadi interaksi user kepada ViewMModel, Model akan berfungsi untuk menerima, menyimpan, atau memberi data pada ViewModel, dan ViewModel berfungai untuk melakukan pengeluaran data dari model yang akan dipilah relevansinya terhadap interaksi yang diterima oleh View.
 
 Perbedaan utama dari ketiga arsitektur tersebut terletak pada logic layer yang berbeda dalam posisinya dalam menerima suatu data atau menerima suatu interaksi dari user.
-
-
+</details>
 

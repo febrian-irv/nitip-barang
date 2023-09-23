@@ -2,6 +2,8 @@
 #### kelas:  PBP A
 
 # Pemrograman Berbasis Platform🐼
+
+## Tugas 3: Implementasi Form dan Data Delivery pada Django
 <details>
 ## <summary>Tugas 3</summary>
 <br>
@@ -57,7 +59,7 @@ Menambahkan pesan "Kamu menitip X barang di aplikasi ini." yang diimplementasika
 </details>
 
 <details>
-## <summary>Tugas 3</summary>
+## <summary>Tugas 2</summary>
 <br>
   
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django

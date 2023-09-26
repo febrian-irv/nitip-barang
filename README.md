@@ -1,12 +1,15 @@
-nama:  Febrian Irvansyah  
-kelas:  PBP A
+#### nama:  Febrian Irvansyah  
+#### kelas:  PBP A
 
 # Pemrograman Berbasis Platform🐼
 
 ## Tugas 3: Implementasi Form dan Data Delivery pada Django
+<details>
+<summary>Click for more detail</summary>
+<br>
 
 #### 1️⃣ Apa perbedaan antara form POST dan form GET dalam Django?
-GET dan POST adalah method HTTP yang mengurus input form. Kedua method tersebut dibedakan dari segi bagaimana form ditransimisikan. Method POST akan memproses data dengan mengenkripsinya terlebih dahulu, mengirim ke server, dan menerima respon. Selain itu, method POST memiliki kelebihan dari segi besar data karena tidak ada pembatasan yang berhubungan dengan URL. Method GET memproses data menjadi sebuah string yang akan muncul pada string query di URL yang menunjukkan kemana data akan dikirim serta berisi data key-value. Method GET memiliki keterbatasan dalam kapasitas karena berhubungan dengan URL yang dibatasi. Oleh karena itu, penggunaannya akan berbeda karena terdapat perbedaan yang jelas dari segi security dan jenis data yang dikirimkan. POST cenderung digunakan untuk data sensitif yang membutuhkan proteksi atau untuk data yang memiliki ukuran besar seperti gambar, Sedangkan GET digunakan untuk mengirim/menerima data yang tidak sensitif dan berukuran tidak besar.
+GET dan POST adalah method HTTP yang mengurus input form. Kedua method tersebut dibedakan dari segi bagaimana form ditransimisikan. Method POST akan memproses data dengan mengenkripsinya terlebih dahulu, mengirim ke server, dan menerima respon. Selain itu, method POST memiliki kelebihan dari segi besar data karena tidak ada pembatasan yang berhubungan dengan URL. Method GET memproses data menjadi sebuah string yang akan muncul pada string query di URL yang menunjukkan kemana data akan dikirim serta berisi data key-value. Method GET memiliki keterbatasan dalam kapasitas karena berhubungan dengan URL yang dibatasi. Oleh karena itu, penggunaannya akan berbeda karena terdapat perbedaan yang jelas dari segi security dan jenis data yang dikirimkan. POST cenderung digunakan untuk data sensitif yang membutuhkan proteksi atau untuk data yang memiliki ukuran besar seperti gambar, Sedangkan GET digunakan untuk menerima data yang tidak sensitif dan berukuran tidak besar.
 
 #### 2️⃣ Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
 XML dan JSON adalah suatu format untuk menyimpan atau mengirim data. HTML adalah suatu markup language yang umunya digunakan untuk mendisplay suatu tampilan situs web. Dalam konteks pengiriman data, HTML memiliki atribut \<form> yang berfungsi untuk menentukan bagaimana data akan ditransmisikan ke server (GET/POST). Sedangkan untuk XML dan JSON digunakan untuk sebagai sebuah tempat penyimpanan dari data yang telah ditransmisikan. Perbedaan JSON dan XML adalah bagaimana notasi dalam penyimpanan datanya. XML adalah sebuah markup language. Oleh karena itu, XML akan menggunakan tag dan marker untuk menunjukkan jenis konten yang human readable serta deskriptif, lalu terdapat nesting yang menunjukkan hubungan antar data. JSON menggunakan data interchange format yang dimana JSON akan menggunakan {"key":"value"} format untuk menunjukkan hubungan antar data. Maka dapat disimpulkan bahwa pembeda utama dalam XML dan JSON adalah terletak pada seberapa compact penulisannya. Compactnya penulisan ini akan berpengaruh dalam fleksibilitas dalam penggunaan data.
@@ -51,8 +54,12 @@ Penulisan JSON yang simpel yaitu menggunakan format key dan value menyebabkan JS
 
 #### 6️⃣ Bonus
 Menambahkan pesan "Kamu menitip X barang di aplikasi ini." yang diimplementasikan pada main.html serta memanfaatkan method `.count` untuk mendapatkan nilai X.
+</details>
 
 ## Tugas 2: Implementasi Model-View-Template (MVT) pada Django
+<details>
+<summary>Click for more detail</summary>
+<br>
 
 #### 1️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 Ide implementasi dari tema aplikasi inventori yang saya pilih adalah aplikasi penitipan barang.
@@ -160,6 +167,5 @@ Pada MVT, View menjadi layer logic yang akan menjembatani hubungan antara data p
 Pada MVVM, memisahkan View dari bagian layer logic. View akan berguna untuk memberikan suatu informasi apabila terjadi interaksi user kepada ViewMModel, Model akan berfungsi untuk menerima, menyimpan, atau memberi data pada ViewModel, dan ViewModel berfungai untuk melakukan pengeluaran data dari model yang akan dipilah relevansinya terhadap interaksi yang diterima oleh View.
 
 Perbedaan utama dari ketiga arsitektur tersebut terletak pada logic layer yang berbeda dalam posisinya dalam menerima suatu data atau menerima suatu interaksi dari user.
-
-
+</details>
 

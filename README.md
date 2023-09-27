@@ -3,6 +3,58 @@
 
 # Pemrograman Berbasis Platform🐼
 
+## Tugas 4: Implementasi Autentikasi, Session, dan Cookies pada Django
+<details>
+<summary>Click for more detail</summary>
+<br>
+
+#### 1️⃣ Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
+UserCreationForm adalah sebuah modul bawaan dari sistem autentikasi Django. Fungsi utama dari UserCreationForm adalah membuat objek user baru tanpa privilage.
+##### Kelebihan dari UserCreationForm:
+- Penggunaannya yang sangat simpel. UserCreationForm akan membantu pengembang untuk mempersingkat waktu dalam skema pembuatan user karena sudah mencakup semua elemen dasar dari registrasi user seperti memasukkan username, password, dan password confirmation.
+- Sudah terhubung dengan sistem autentikasi django sehingga pengembang mudah dalam melakukan pembuatan sistem seperti login.
+- UserCreationForm sudah mengimplementasikan langkah untuk menjaga keamanan user. Data yang diinput user seperti password disimpan tidak dalam bentuk plaintext pada database django dan sudah terdapat sistem untuk menghindari serangan peretas seperti XSS.
+##### Kekurangan dari UserCreationForm:
+- Implementasi dari pembuatan user masih sederhana seperti username dan password sehingga diperlukan penambahan secara manual untuk nama belakang dan email.
+- Diperlukan implementasi tambahan lebih lanjut oleh pengembang jika ingin membuat password yang lebih aman seperti harus terdapat karakter spesial.
+- Tidak melakukan validasi email apakah sudah benar atau tidak.
+- Registrasi sangat sederhana karena hanya terdiri dari satu tahap dan perlu dilakukan secara manual jika ingin menambah tahap lain.
+
+#### 2️⃣ Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+Autentikasi adalah proses pemerikasaan atau verifikasi apakah user ada dan memiliki data yang sesuai dengan yang diinputkan. Proses autentikasi penting untuk memastikan setiap orang yang ingin mengakses aplikasi web memiliki hak akses pada website tersebut yang akan berhubungan dengan otorisasi. Otorisasi adalah proses penenetuan tindakan atau hak akses apa saja yang dapat dilakukan oleh user yang sudah terautentikasi. Pentingnya otorisasi adalah pemisahan hak sesuai jabatan/role sehingga menciptakan keteraturan dalam penggunaan aplikasi web dan melindungi dari akses yang berusaha untuk mengubah website tanpa jabatan yang sesuai.
+
+#### 3️⃣ Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+Cookie dalam aplikasi web adalah suatu bentuk kumpulan informasi yang didapatkan dari rekam jejak aktivitas yang pernah dilakukan user pada aplikasi web tersebut. Pada Django cookies dikelola melalui method dari HttpResponse. Untuk menyimpan suatu cookie dilakukan method set_cookie() pada HttpResponse dengan parameter key dan value yang nilainya dapat diakses melalui request.COOKIES['key']. Untuk menghapus suatu cookie dilakukan method delete_cookie('key) yang biasa dilakukan apabila sesi pengguna telah selesai.
+
+#### 4️⃣ Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+Secara default penggunaaan cookies aman dalam pengembangan web. Cookies biasa disimpan oleh komputer pribadi user yang memiliki unique id. Oleh karena itu, data yang terdapat pada cookie hanya dapat diakses oleh pemilik komputer itu sendiri kecuali pengguna itu sendiri yang memberikan akses terhadap data pribadinya. Informasi yang tersimpan pada cookie secara default bukan digunakan untuk melakukan peretasan, melainkan cookie digunakan sebagai pengingat website jika user pernah mengunjungi website tersebut sehingga website dapat membuat laman yang lebih personal terhadap preferensi user tersebut. Namun, tentu saja terdapat risiko yang terjadi dalam penggunaan cookie contohnya dalam skema peretasan Man-in-the-middle. Dalam peretasan tersebut, peretas akan mencoba untuk menangkap data user ditengah pengaksesan user terhadap website. Dengan hal tersebut, peretas bisa mendapat cookie data user karena user secara tidak langsung juga memberi akses terhadap cookie karena pengaksesan website yang membutuhkan unique id.
+
+#### 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+##### ✅ Mengimplementasikan fungsi registrasi, login, dan logout untuk memungkinkan pengguna untuk mengakses aplikasi sebelumnya dengan lancar.
+- Menambah fungsi registrasi, login, dan logout pada views.py
+- Pada fungsi registrasi memanfaatkan method pada UserCreationForm yang telah diimport untuk menambah user baru. Pada fungsi ini akan memastikan pengisian pada form valid atau tidak serta akan redirect pada login jika sudah benar. Pada fungsi ini merender register.html yang telah dibuat templatenya.
+- Pada fungsi login_user akan memanfaatkan fungsi authenticate dan login yang diimport untuk mengautentikasi input user berupa username dan password. Jika user ditemukan maka akan redirect pada show_main. Pada fungsi ini merender login.html yang templatenya telah dibuat.
+-Pada fungsi logout_user akan memanfaatkan fungsi logout yang diimport sebagai fungsi yang menghapus sesi pengguna saat ini. Pada fungsi ini akan memanggil fungsi logout dengan parameter request serta redirect pada login page.
+
+##### ✅ Membuat dua akun pengguna dengan masing-masing tiga dummy data menggunakan model yang telah dibuat pada aplikasi sebelumnya untuk setiap akun di lokal.
+- Melakukan registrasi 2 akun.
+- Login pada masing-masing akun dan menambahkan 3 item baru pada masing-masing akun.
+
+##### ✅ Menghubungkan model Item dengan User.
+- Import User pada models.py dan menambah atribut user pada Item dengan menggunakan method ForeignKey berparameter User.
+- Hubungkan fungsi-fungsi pada views.py dengan model user seperti pada fungsi add_item dan show_main yang memfilter item berdasarkan user yang login saja.
+- Lakukan command makemigrations dan migrate pada manage.py
+
+##### ✅ Menampilkan detail informasi pengguna yang sedang logged in seperti username dan menerapkan cookies seperti last login pada halaman utama aplikasi.
+-Untuk mendapat informasi pengguna, pada fungsi show_manin telah memfilter item sesuai user yang sedang login. Pada dictionary context dilakukan penambahan variable sesuai data yang personalized dalam kasus ini adalah username yang dapat diambil dari data user.
+- Untuk menambah fitur last login maka mengimport fungsi datetime lalu melakukan set_cookie dengan key 'last_login' dan valuenya berisi datetime sekarang yang kodenya disematkan pada saat user melakukan login.
+- Pada fungsi show_main dictionary context akan menambahkah key last_login dengan value request_COOKIES['last_login']
+- Menampilkan last login pada template dengan {{ last_login }}
+- Pada fungsi logout dilakukan delete_cookie('last_login') yang menandakan akhir sesi
+</details>
+
+
 ## Tugas 3: Implementasi Form dan Data Delivery pada Django
 <details>
 <summary>Click for more detail</summary>

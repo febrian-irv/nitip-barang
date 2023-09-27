@@ -40,6 +40,10 @@ Secara default penggunaaan cookies aman dalam pengembangan web. Cookies biasa di
 ##### ✅ Membuat dua akun pengguna dengan masing-masing tiga dummy data menggunakan model yang telah dibuat pada aplikasi sebelumnya untuk setiap akun di lokal.
 - Melakukan registrasi 2 akun.
 - Login pada masing-masing akun dan menambahkan 3 item baru pada masing-masing akun.
+- Akun A
+![](img/akun-a.png)
+- Akun B
+![](img/akun-b.png)
 
 ##### ✅ Menghubungkan model Item dengan User.
 - Import User pada models.py dan menambah atribut user pada Item dengan menggunakan method ForeignKey berparameter User.

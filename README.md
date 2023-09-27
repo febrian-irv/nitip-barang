@@ -52,6 +52,10 @@ Secara default penggunaaan cookies aman dalam pengembangan web. Cookies biasa di
 - Pada fungsi show_main dictionary context akan menambahkah key last_login dengan value request_COOKIES['last_login']
 - Menampilkan last login pada template dengan {{ last_login }}
 - Pada fungsi logout dilakukan delete_cookie('last_login') yang menandakan akhir sesi
+
+#### 6️⃣ Bonus
+- Membuat tombol dan fungsi untuk mengurangi dan menambahkan item.
+- Membuat tombol dan fungsi untuk menghapus item.
 </details>
 
 

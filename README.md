@@ -47,7 +47,7 @@ Secara default penggunaaan cookies aman dalam pengembangan web. Cookies biasa di
 - Lakukan command makemigrations dan migrate pada manage.py
 
 ##### ✅ Menampilkan detail informasi pengguna yang sedang logged in seperti username dan menerapkan cookies seperti last login pada halaman utama aplikasi.
--Untuk mendapat informasi pengguna, pada fungsi show_manin telah memfilter item sesuai user yang sedang login. Pada dictionary context dilakukan penambahan variable sesuai data yang personalized dalam kasus ini adalah username yang dapat diambil dari data user.
+- Untuk mendapat informasi pengguna, pada fungsi show_manin telah memfilter item sesuai user yang sedang login. Pada dictionary context dilakukan penambahan variable sesuai data yang personalized dalam kasus ini adalah username yang dapat diambil dari data user.
 - Untuk menambah fitur last login maka mengimport fungsi datetime lalu melakukan set_cookie dengan key 'last_login' dan valuenya berisi datetime sekarang yang kodenya disematkan pada saat user melakukan login.
 - Pada fungsi show_main dictionary context akan menambahkah key last_login dengan value request_COOKIES['last_login']
 - Menampilkan last login pada template dengan {{ last_login }}

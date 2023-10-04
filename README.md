@@ -37,6 +37,39 @@ Class selector digunakan untuk mengelompokkan elemen-elemen pada html yang biasa
 - ```<td>```: mendeklarasikan suatu cell pada tabel.
 - ```<th>```: mendeklarasikan header dari tabel.
 - ```<span```: menunjukkan suatu bagian tertentu dari sebuah teks. 
+- ```<link>```: menghubungkan dokumen dengan sumber resource eksternal.
+- ```<form>```: mendeklarasikan bagian untuk menerima input dari pengguna.
+
+#### 3️⃣ Jelaskan perbedaan antara margin dan padding.
+Perbedaan ini dapat digambarkan dengan membayangkan suatu kontainer di luar suatu konten. Maka padding berfungsi untuk memberi jarak/mengosongkan bagian antara konten yang berada di dalam dengan kontainernya. Sedangkan, margin akan memberikan jarak/mengosongkan bagian antara kontainer dengan elemen yang terdapat di luar kontainer tersebut.
+
+#### 4️⃣ Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+- Tailwind:
+Sebuah CSS framework yang bersifat utility-first yang dimana pengembang memiliki kemampuan untuk secara spesifik melakukan styling pada laman web hanya melalui dokumen HTML. Styling dalam tailwind dapat dilakukan dengan kontrol lebih dalam terhadap style yang diinginkan pengembang sehingga pengembang memiliki kebebasan lebih walaupun tanpa penggunaan dokumen CSS yang dibuat pengembang itu sendiri.
+- Bootstrap:
+Sebuah CSS framework yang berisi kumpulan kode yang dapat digunakan kembali.Bootstrap telah menyiapkan template-template untuk komponen yang kemungkinan akan dibutuhkan pada suatu website.
+
+Pemilihan dilakukan sesuai dengan kebutuhan pengembang. Jika pengembang membutuhkan sebuah website yang dapat dibangun secara cepat dan komponen-komponennya telah disediakan serta ingin bersifat konsisten maka dapat disarankan untuk menggunakan bootstrap. Sedangkan, jika pengembang ingin berfokus pada desain web yang lebih customizable sesuai keinginan pengembang dan menghindari penggunaan kode yang tidak diperlukan maka disarankan menggunakan tailwind karena lebih mengimplementasikan best practices.
+
+#### 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+Dalam pengimplementasian checklist saya menggunakan kombinasi vanilla CSS dan bootsrap.
+##### ✅ Kustomisasi halaman login, register, dan tambah inventori semenarik mungkin.
+- Membuat direktori static pada root folder yang berisi folder bernama css yang akan diisi oleh dokumen-dokumen css untuk implementasi vanilla CSS.
+- Menghubungkan projek dengan direktori static melalui settings.py.
+- Menambahkan ```{% block extra_css %}``` pada base.html untuk menghubungkan masing-masing child directory dari base dengan cssnya masing masing.
+- Membuat dokumen CSS dengan nama ```registration.css``` pada folder static/css untuk menghandle styling pada login, register, dan add item karena memiliki karakteristik laman yang sama yaitu berupa isian user.
+- Melakukan styling pada ```registration.css``` menengahkan elemen-elemen, memberi kustomisasi pada tombol, font, memberi border, dan styling khusus untuk logo.
+
+ ##### ✅ Kustomisasi halaman daftar inventori menjadi lebih berwarna maupun menggunakan apporach lain seperti menggunakan Card.
+ - Membuat dokumen CSS dengan nama ```registration.css``` pada folder static/css untuk menghandle styling pada bagian main.html.
+ - Pewarnaan yang saya inginkan adalah dengan nuansa warna kuning.
+ - Membuat navbar dengan background kuning yang berisi logo web dan tombol logout.
+ - Menspesifikasikan bagian awal dari web dengan data-data user termasuk dengan sesi login.
+ - Pada list barang saya memanfaatkan class card dari bootstrap untuk merepresentasikan setiap card dengan suatu barang yang ditambahkan user.
+ - melakukan styling pada tiap tombol dengan perwarnaan dan hover.
+
+ #### 6️⃣ Bonus: Memberikan warna yang berbeda (teks atau background) pada baris terakhir dari item pada inventori anda menggunakan CSS.
+ Memberikan warna biru pada baris terakhir item dengan membuat id khusus pada item terakhir melalui conditionals pada iterasi for loop, lalu menggunakan id tersebut untuk melakukan styling item terakhir. 
 
 </details>
 

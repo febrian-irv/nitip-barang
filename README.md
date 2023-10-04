@@ -47,7 +47,7 @@ Perbedaan ini dapat digambarkan dengan membayangkan suatu kontainer di luar suat
 - Tailwind:
 Sebuah CSS framework yang bersifat utility-first yang dimana pengembang memiliki kemampuan untuk secara spesifik melakukan styling pada laman web hanya melalui dokumen HTML. Styling dalam tailwind dapat dilakukan dengan kontrol lebih dalam terhadap style yang diinginkan pengembang sehingga pengembang memiliki kebebasan lebih walaupun tanpa penggunaan dokumen CSS yang dibuat pengembang itu sendiri.
 - Bootstrap:
-Sebuah CSS framework yang berisi kumpulan kode yang dapat digunakan kembali.Bootstrap telah menyiapkan template-template untuk komponen yang kemungkinan akan dibutuhkan pada suatu website.
+Sebuah CSS framework yang berisi kumpulan kode yang dapat digunakan kembali. Bootstrap telah menyiapkan template-template untuk komponen yang kemungkinan akan dibutuhkan pada suatu website.
 
 Pemilihan dilakukan sesuai dengan kebutuhan pengembang. Jika pengembang membutuhkan sebuah website yang dapat dibangun secara cepat dan komponen-komponennya telah disediakan serta ingin bersifat konsisten maka dapat disarankan untuk menggunakan bootstrap. Sedangkan, jika pengembang ingin berfokus pada desain web yang lebih customizable sesuai keinginan pengembang dan menghindari penggunaan kode yang tidak diperlukan maka disarankan menggunakan tailwind karena lebih mengimplementasikan best practices.
 

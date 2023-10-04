@@ -1,63 +1,50 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>{{ nama_aplikasi }}</h1>
 
-<h5>Nama: </h5>
-<p>{{ nama }}</p>
-<h5>Class: </h5>
-<p>{{ kelas }}</p>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/inventory.css' %}" />
+{% endblock extra_css %}
 
-<p>Kamu menitip {{ items.count }} barang di aplikasi ini.</p>
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Description</th>
-    </tr>
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <h1 class="navbar-logo">{{ nama_aplikasi }}</h1>
+      <a href = "{% url 'main:logout' %}" >
+        <button type="button" class="btn btn-logout">Logout</button>
+      </a>  
+    </div>
+  </nav>
 
-    {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
+  
+  <div class = "main-content">
+    <h5>Sesi terakhir login: {{ last_login }}</h5>
+    <h5>Nama: {{ nama }}</h5>
+    <h5>Class: {{ kelas }}</h5>
 
-    {% for item in items %}
-        <tr>
-            <td>{{item.name}}</td>
-            <td>
-            <a href="{% url 'main:substract_amount' item.id %}">
-                <button>
-                    &lt;
-                </button>
-            </a>
-            {{item.amount}}
-            <a href="{% url 'main:add_amount' item.id %}">
-                <button>
-                    &gt;
-                </button>
-            </a>
-            </td>
-            <td>
-                {{item.description}}
-                <a href="{% url 'main:delete_item' item.id %}">
-                    <button>
-                        Hapus Item
-                    </button>
-                </a>
-            </td>
-        </tr>
-    {% endfor %}
-</table>
+    <p>Kamu menitipkan {{ items.count }} barang ini:</p>
 
-<br/>
-<h5>Sesi terakhir login: {{ last_login }}</h5>
-<br/>
+        {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
 
-<a href="{% url 'main:add_item' %}">
-    <button>
-        Add Item
-    </button>
-</a>
-<a href="{% url 'main:logout' %}">
-    <button>
-        Logout
-    </button>
-</a>
+        {% for item in items %}
+            <div class="card">
+                <h5 class="card-header" {% if forloop.last %} id="last-item"{% endif %}>{{item.name}}</h5>
+                <div class="card-body" {% if forloop.last %} id="last-body"{% endif %}>
+                <h5 class="card-title">Jumlah: {{item.amount}}</h5>
+                <p class="card-text">{{item.description}}</p>
+                <a href="{% url 'main:delete_item' item.id %}" class="btn btn-hapus">Delete Item</a>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    
+
+    <a id="btn-add" href="{% url 'main:add_item' %}">
+        <button type="button" class="btn btn-add">
+            Tambahkan Barang
+        </button>
+    </a>
+
+</div>
 {% endblock content %}

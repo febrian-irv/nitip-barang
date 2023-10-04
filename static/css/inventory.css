@@ -1,0 +1,68 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.navbar-logo {
+    font-family: 'EB Garamond', serif;
+}
+
+.btn-hapus {
+    background-color: rgb(225, 90, 90);
+}
+
+.btn-hapus:hover {
+    background-color: rgb(213, 37, 37);
+}
+
+.btn-logout {
+    background-color: rgb(225, 90, 90);
+    color: black;
+}
+
+.btn-logout:hover {
+    background-color: rgb(213, 37, 37);
+    color: black;
+}
+
+.main-content {
+    margin: 20px;
+    align-items: center;
+}
+
+.card {
+    margin: 20px 0px;
+}
+
+.card-header {
+    background-color: rgb(228, 183, 23);
+}
+
+.card-body {
+    background-color: rgb(244, 231, 182);
+}
+
+.container-fluid {
+    background-color: rgb(228, 183, 23);
+}
+
+#btn-add {
+    background-color: rgb(240, 216, 129);
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+}
+
+#btn-add:hover {
+    background-color: rgb(228, 183, 23);
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+}
+
+#last-item {
+    background-color: rgb(61, 153, 207);
+}
+
+#last-body {
+    background-color: rgb(138, 197, 231);
+}

@@ -3,6 +3,43 @@
 
 # Pemrograman Berbasis Platform🐼
 
+## Tugas 5: Desain Web menggunakan HTML, CSS dan Framework CSS
+<details>
+<summary>Click for more detail</summary>
+<br>
+
+#### 1️⃣ Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+Selector digunakan untuk memilih suatu bagian dari html untuk dilakukan modifikasi styling. Terdapat 3 jenis selector:
+
+1. Element Selector
+Manfaatnya untuk memilih semua element yang memiliki tag yang sama sesuai yang tag yang dituliskan. Selector ini dapat bermanfaat ketika kita ingin memiliki suatu styling yang konsisten bagi setiap tag yang sama.
+2. ID Selector
+ID pada suatu web bersifat unik maka ID selector digunakan untuk memilih bagian suatu bagian yang berbeda dari bagian yan lain. Selector ini dapat digunakan jika kita hanya ingin mengaplikasikan suatu styling pada suatu bagian tertentu tanpa melihat elemen lainnya yang memiliki kesamaan seperti tag maupun class.
+3. Class Selector
+Class selector digunakan untuk mengelompokkan elemen-elemen pada html yang biasanya memiliki sifat yang sama dan berulang. Waktu menggunakan selector ini adalah ketika kita ingin mengaplikasikan styling yang sama pada element yang mirip sehingga tidak perlu melakukan styling berkali-kali.
+
+#### 2️⃣ Jelaskan HTML5 Tag yang kamu ketahui.
+- ```<head>```: untuk menyimpan metadata dari dokumen html seperti title dan stylesheet.
+- ```<body>```: berisi isi dari sebuah laman web yang dapat dilihat oleh pengguna
+- ```<img>```: untuk memasukkan gambar pada laman web.
+- ```<ul>```: mendeklarasikan list tidak berurut.
+- ```<ol>```: mendeklarasikan list berurut.
+- ```<li>```: menunjukkan item dari list.
+- ```<title>```: mendeklarasikan judul dari laman.
+- ```<p>```: mendeklarasikan penulisan paragraf.
+- ```<h1>-<h6>```: menunjukkan heading sesuai dengan urutan kepentingannya.
+- ```<div>```: sebagai pengelompok dari tag lainnya.
+- ```<a>```: mendeklarasikan hyperlink.
+- ```button```: mendeklarasikan tombol yang dapat diklik.
+-  ```<nav>```: mendeklarasikan bagian navigasi yang berisi link-link.
+- ```<table>```: mendeklarasikan tabel.
+- ```<tr>``` : mendeklarasikan baris dari tabel.
+- ```<td>```: mendeklarasikan suatu cell pada tabel.
+- ```<th>```: mendeklarasikan header dari tabel.
+- ```<span```: menunjukkan suatu bagian tertentu dari sebuah teks. 
+
+</details>
+
 ## Tugas 4: Implementasi Autentikasi, Session, dan Cookies pada Django
 <details>
 <summary>Click for more detail</summary>

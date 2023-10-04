@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block meta %}
     <title>Login</title>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}" />
+{% endblock extra_css %}
+
 {% endblock meta %}
 
 {% block content %}
 
 <div class = "login">
 
-    <h1>Login</h1>
+    <h1 class = "judul">Nitip Barang</h1>
 
     <form method="POST" action="">
         {% csrf_token %}

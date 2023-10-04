@@ -1,19 +1,25 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 {% block content %}
-<h1>Add New Item</h1>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/add_item.css' %}" />
+{% endblock extra_css %}
 
-<form method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="Add Item"/>
-            </td>
-        </tr>
-    </table>
-</form>
+
+<div class = "add_item">
+    <h1>Add New Item</h1>
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <input class="add_item_btn" type="submit" value="Add Item"/>
+    </form>
+</div>
 
 {% endblock %}

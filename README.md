@@ -3,6 +3,42 @@
 
 # Pemrograman Berbasis Platform🐼
 
+## Tugas 6: JavaScript dan Asynchronous JavaScript
+<details>
+<summary>Click for more detail</summary>
+<br>
+
+#### 1️⃣ Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+Perbedaan terletak pada bagaimana kedua jenis programming ini menerima request. Pada asychronous programming, program akan dijalankan secara paralel sehingga setiap fungsi/pekerjaan yang dilakukan pada program tidak bergantung satu sama yang lainnya (non-blocking) serta program tidak dijalankan berdasarkan urutan tertentu. Pada synchronous programming, program akan dijalankan secara urutan sekuensial sehingga jika suatu pekerjaan gagal untuk dilakukan akan mempengaruhi pekerjaan lain (blocking). Contoh paada web development synchronous programming umumnya menggunakan server-side scripting dan asynchronous menggunakan AJAX. Biasanya asynchronous programming lebih kompleks dalam penerapan kodenya.
+
+#### 2️⃣ Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+Event-driven programming adalah paradigma yang menunjukkan suatu jenis pemrograman yang menjadikan aksi (event) dari user sebagai pengatur dari alur program. Aksi ini berupa hasil dari interupsi perangkat input seperti mouse, trackpad, keyboard, dan touchscreen. Oleh karena itu, harus terdapat event handler pada event-programming untuk merespon sebuah aksi spesifik yang dilakukan user. Contoh penerapannya pada tugas ini adalah tombol logout pada main yang jika diklik akan mengeluarkan user dari laman main tersebut.
+
+#### 3️⃣ Jelaskan penerapan asynchronous programming pada AJAX.
+AJAX bergantung pada event-driven programming yang akan dieksekusi jika terdapat aksi yang mentrigger suatu fungsi. Dengan AJAX, request dapat terkitim pada server tanpa melakukan refresh pada laman web. Request ini dilakukan dengan XMLHttpRequest atau dapat digantikan dengan Fetch API. Penerapannya dengan memanfaatkan fungsi async dan await untuk memproses pekerjaan dan menghasilkan respon. Dengan menggunakan fungsi async, nilai yang akan dikembalikan oleh fungsi tersebut akan dikembalikan secara asinkronus tanpa mempengaruhi fungsi lain serta await digunakan untuk menunggu hasil dari fungsi async.
+
+#### 4️⃣ Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+Kedua teknologi ini sama-sama digunakan untuk menghandle http request asinkronus pada javascript. Namun, Fetch adalah sebuah javascript interface yang dapat mengakses maupun menanipulasi pertukaran/pengiriman data. Karena fetch sudah merupakan bagian dari interface javascript, fetch diunggulkan dari segi efisiensi serta fetch memiliki sintaks yang lebih sederhana. JQuery adalah sebuah library yang memiliki method ajax() untuk melakukan http request. JQuery sudah ada lebih lama daripada fetch maka memiliki kode yang lebih mature. JQuery juga options yang sudah lengkap dalam mengkofigurasi request ajax. Untuk penggunaannya menurut saya dapat disesuaikan dengan kebutuhan, jika digunakan untuk project yang lebih mordern dan ingin lebih native pada javascript  maka gunakan fetch, jika mengerjakan projek lama dan lebih memilih cara dengan abtraksi yang lebih straightforward gunakan JQuery.
+
+#### 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+##### ✅ AJAX GET
+- Membuat fungsi get product dengan memfilter sesuai user yang sedang login.
+- Menghubungkan fungsi tersebut dengan urls.py
+- Script pada main.html is dengan pemanggilan get produk dan menampilkan produk dengan forloop pada html.
+
+##### ✅ AJAX POST
+- Membuat button yang membuka sebuah modal.
+- Membuat template form setelah tombol tersebut diklik.
+- Membuat fungsi add product yang akan dihubungkan dengan urls.py dengan path dan nama create-ajax.
+- Menambahkan script pada main.html untuk dihubungkan dengan fungsi untuk menambahkan produk.
+
+##### ✅ Melakukan perintah collectstatic.
+- Menyiapkan folder untuk menyimpan collectstatic pada settings.py dengan root folder adalah root dari project.
+- Menjalankan command `python manage.py collectstatic`
+
+</details>
+
 ## Tugas 5: Desain Web menggunakan HTML, CSS dan Framework CSS
 <details>
 <summary>Click for more detail</summary>

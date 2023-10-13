@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+  }
+
+tr, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.add_item_btn{
+    background-color: rgb(116, 169, 221);
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.add_item_btn:hover {
+    background-color: rgb(58, 136, 215);
+}
+
+.add_item {
+    width: 40%;
+    text-align: center;
+    border: 2px solid #e3dede;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.judul {
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 30px;
+}
